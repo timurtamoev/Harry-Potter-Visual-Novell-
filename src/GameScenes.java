@@ -215,6 +215,45 @@ public class GameScenes {
                 null, null, scene26
         );
 
+        Scene end17 = new Scene("Печать правды", new String[]{"Я разбил ключ в подземелье. Искры поползли по туннелям. Наутро в Министерстве уже знали: правду не спрятать."}, "hp_40_snitch.png", null, null, null);
+        Scene end18 = new Scene("Тень в подземелье", new String[]{"Дамблдор взял ключ. Его лицо в полутьме было усталым. «Ты сделал правильный выбор.» Я вышел из подземелья и не оборачивался."}, "hp_40_snitch.png", null, null, null);
+        Scene end19 = new Scene("Тройной союз", new String[]{"Рон и Гермиона поверили. Мы трое — и ключ. Что бы ни было дальше, мы идём вместе."}, "hp_40_snitch.png", null, null, null);
+        Scene end20 = new Scene("Один со знанием", new String[]{"Я не сказал ни слова. Ключ спрятан. Руины — тайна. Когда-нибудь час придёт."}, "hp_40_snitch.png", null, null, null);
+
+        Scene sceneF24a = new Scene("Осколки в подземелье", new String[]{"Фон: Ключ разбит, искры впитываются в стены подземелья.", "Текст: «Правда выходит наружу. Наутро в Министерстве уже знают»."}, "hp_33_memory_shards.png", null, null, end17);
+        Scene sceneF25a = new Scene("Встреча с Дамблдором в подземелье", new String[]{"Дамблдор в подземном зале. Дамблдор: «Ты пришёл сам. Ключ — мне.»"}, "hp_30_trap.png", null, null, end18);
+        Scene sceneF23a = new Scene("Выбор: Финал в подземелье", new String[]{"Текст: «Подземный зал. Печать на стене. Ключ в руке.»"}, "hp_f22.png", new String[]{"Разбить ключ здесь — освободить память", "Отнести ключ Дамблдору"}, new Scene[]{sceneF24a, sceneF25a}, null);
+        Scene sceneF22a = new Scene("Подземный зал", new String[]{"Фон: Пустой зал под Министерством. Печать на стене — как в башне."}, "hp_f22.png", null, null, sceneF23a);
+        Scene sceneF21a = new Scene("Тайный вход", new String[]{"Фон: Подземный ход. Старые ступени, факелы."}, "hp_f21.png", null, null, sceneF22a);
+        Scene sceneF20a = new Scene("Окраина Министерства", new String[]{"Фон: Здание Министерства ночью. Тайный вход для «своих»."}, "hp_f20.png", null, null, sceneF21a);
+        Scene sceneF19a = new Scene("Ночная дорога", new String[]{"Текст: «Тёмная дорога к Лондону. Ключ спрятан под мантией.»"}, "hp_f19.png", null, null, sceneF20a);
+
+        Scene sceneF22b = new Scene("Тройной союз", new String[]{"Рон и Гермиона: «Мы с тобой.» Ключ — общий."}, "hp_15_common_room.png", null, null, end19);
+        Scene sceneF23b = new Scene("Один со знанием", new String[]{"Текст: «Я не сказал ни слова. Ключ спрятан. Жду своего часа.»"}, "hp_09_hogwarts_corridor.png", null, null, end20);
+        Scene sceneF21b = new Scene("Выбор: Сказать или молчать", new String[]{"Рон и Гермиона: «Где ты был? Мы волновались.»"}, "hp_15_common_room.png", new String[]{"Рассказать всё про руины и печать", "Молчать и ждать своего часа"}, new Scene[]{sceneF22b, sceneF23b}, null);
+        Scene sceneF20b = new Scene("Встреча с друзьями", new String[]{"Фон: Рон и Гермиона ждут. Рон: «Где ты был? Мы волновались.»"}, "hp_15_common_room.png", null, null, sceneF21b);
+        Scene sceneF19b = new Scene("Возвращение в замок", new String[]{"Фон: Утро. Возвращение в Хогвартс с ключом."}, "hp_06_arrival.png", null, null, sceneF20b);
+
+        Scene sceneF18 = new Scene("Выбор: Путь из леса", new String[]{"Текст: «Укрытие в пещере. Куда идти дальше?»"}, "hp_f17.png", new String[]{"Идти в Министерство тайно — через подземелья", "Вернуться в замок и действовать как все"}, new Scene[]{sceneF19a, sceneF19b}, null);
+        Scene sceneF17 = new Scene("Пещера", new String[]{"Фон: Небольшая пещера. Передышка. Решение: куда идти дальше."}, "hp_f17.png", null, null, sceneF18);
+        Scene sceneF16 = new Scene("Ручей", new String[]{"Фон: Переправа через ручей. След теряется."}, "hp_20_forest.png", null, null, sceneF17);
+        Scene sceneF15 = new Scene("Погоня в лесу", new String[]{"Фон: Бег сквозь деревья. Крики за спиной. Ключ не выпускать."}, "hp_20_forest.png", null, null, sceneF16);
+        Scene sceneF14 = new Scene("Побег с башни", new String[]{"Текст: «Спуск в темноте. Погоня снаружи.»"}, "hp_f14.png", null, null, sceneF15);
+        Scene sceneF13 = new Scene("Шаги снаружи", new String[]{"Текст: «Агенты Министерства или тёмные фигуры. Их навели на след.»"}, "hp_f13.png", null, null, sceneF14);
+        Scene sceneF12 = new Scene("Ключ реагирует", new String[]{"Фон: Ключ светится. Надпись на камне вспыхивает. Где-то слышны шаги."}, "hp_f12.png", null, null, sceneF13);
+        Scene sceneF11 = new Scene("Надпись на камне", new String[]{"Текст: «Кто владеет ключом — владеет правдой. Кто разобьёт печать — освободит память.»"}, "hp_f11.png", null, null, sceneF12);
+        Scene sceneF10 = new Scene("Верх башни", new String[]{"Фон: Открытое небо, звёзды. Каменный постамент с надписью."}, "hp_f10.png", null, null, sceneF11);
+        Scene sceneF9a = new Scene("Воспоминание Лили", new String[]{"Фон: Короткая вспышка. Мать оставляет ключ в тайнике. Лили: «Для тебя, когда придёт время.»"}, "hp_23_lily.png", null, null, sceneF10);
+        Scene sceneF9b = new Scene("Обход печати", new String[]{"Текст: «Подъём по лестнице. Печать остаётся сзади. Тревога.»"}, "hp_f09.png", null, null, sceneF10);
+        Scene sceneF8 = new Scene("Выбор: Печать", new String[]{"Текст: «Печать с глазом на стене. Холод от неё.»"}, "hp_f07.png", new String[]{"Прикоснуться к печати ключом", "Обойти и подняться выше"}, new Scene[]{sceneF9a, sceneF9b}, null);
+        Scene sceneF7 = new Scene("Печать на стене", new String[]{"Фон: Та же печать с глазом, что у Министерства. Холод от неё."}, "hp_f07.png", null, null, sceneF8);
+        Scene sceneF6 = new Scene("Встреча с призраком", new String[]{"Персонаж: Призрак хранителя. Призрак: «Ключ Лили. Ты её сын.»"}, "hp_f06.png", null, null, sceneF7);
+        Scene sceneF5 = new Scene("Фрески с символами", new String[]{"Фон: На стенах — символы глаза и ключа. То же, что у незнакомца в поезде."}, "hp_f05.png", null, null, sceneF6);
+        Scene sceneF4 = new Scene("Внутри башни", new String[]{"Фон: Каменные стены, следы огня. Древнее место силы."}, "hp_f04.png", null, null, sceneF5);
+        Scene sceneF3 = new Scene("Развалины башни", new String[]{"Фон: Круглая башня без крыши, плющ, звёзды над головой."}, "hp_f03.png", null, null, sceneF4);
+        Scene sceneF2 = new Scene("Старая ограда", new String[]{"Фон: Полуразрушенная каменная ограда, руны. Текст: «Здесь когда-то было святилище.»"}, "hp_f02.png", null, null, sceneF3);
+        Scene sceneF1 = new Scene("Тропа к руинам", new String[]{"Фон: Ключ пульсирует и тянет вглубь леса. Тёмная тропа, лунный свет."}, "hp_f01.png", null, null, sceneF2);
+
         Scene scene24 = new Scene(
                 "Выбор: Альянс",
                 new String[]{
@@ -230,6 +269,8 @@ public class GameScenes {
                 null
         );
 
+        Scene choiceLily = new Scene("Выбор: Куда идти", new String[]{"Лили: «Ищи руины в глубине леса — там печать, которую они боятся.» Текст: «К замку или в чащу?»"}, "hp_23_lily.png", new String[]{"К замку — к Малфою или действовать одному", "В глубину леса — к руинам, о которых говорила Лили"}, new Scene[]{scene24, sceneF1}, null);
+
         Scene scene23 = new Scene(
                 "Голограмма Лили",
                 new String[]{
@@ -238,7 +279,7 @@ public class GameScenes {
                         "Лили: «Не верь печати с глазом»."
                 },
                 "hp_23_lily.png",
-                null, null, scene24
+                null, null, choiceLily
         );
 
         Scene scene22 = new Scene(
